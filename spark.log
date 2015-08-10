@@ -1,0 +1,132 @@
+2015-08-10 17:44:27,561 INFO  [main] spark.SparkContext (Logging.scala:logInfo(59)) - Running Spark version 1.4.1
+2015-08-10 17:44:28,205 WARN  [main] spark.SparkConf (Logging.scala:logWarning(71)) - 
+SPARK_CLASSPATH was detected (set to ':/usr/lib/hadoop/*:/usr/lib/hadoop/../hadoop-hdfs/*:/usr/lib/hadoop/../hadoop-mapreduce/*:/usr/lib/hadoop/../hadoop-yarn/*:/etc/hive/conf:/usr/lib/hadoop/../hadoop-lzo/lib/*:/usr/share/aws/emr/emrfs/conf:/usr/share/aws/emr/emrfs/lib/*:/usr/share/aws/emr/emrfs/auxlib/*').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+2015-08-10 17:44:28,207 WARN  [main] spark.SparkConf (Logging.scala:logWarning(71)) - Setting 'spark.executor.extraClassPath' to ':/usr/lib/hadoop/*:/usr/lib/hadoop/../hadoop-hdfs/*:/usr/lib/hadoop/../hadoop-mapreduce/*:/usr/lib/hadoop/../hadoop-yarn/*:/etc/hive/conf:/usr/lib/hadoop/../hadoop-lzo/lib/*:/usr/share/aws/emr/emrfs/conf:/usr/share/aws/emr/emrfs/lib/*:/usr/share/aws/emr/emrfs/auxlib/*' as a work-around.
+2015-08-10 17:44:28,207 WARN  [main] spark.SparkConf (Logging.scala:logWarning(71)) - Setting 'spark.driver.extraClassPath' to ':/usr/lib/hadoop/*:/usr/lib/hadoop/../hadoop-hdfs/*:/usr/lib/hadoop/../hadoop-mapreduce/*:/usr/lib/hadoop/../hadoop-yarn/*:/etc/hive/conf:/usr/lib/hadoop/../hadoop-lzo/lib/*:/usr/share/aws/emr/emrfs/conf:/usr/share/aws/emr/emrfs/lib/*:/usr/share/aws/emr/emrfs/auxlib/*' as a work-around.
+2015-08-10 17:44:28,250 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - Changing view acls to: hadoop
+2015-08-10 17:44:28,251 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - Changing modify acls to: hadoop
+2015-08-10 17:44:28,252 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(hadoop); users with modify permissions: Set(hadoop)
+2015-08-10 17:44:29,188 INFO  [sparkDriver-akka.actor.default-dispatcher-2] slf4j.Slf4jLogger (Slf4jLogger.scala:applyOrElse(80)) - Slf4jLogger started
+2015-08-10 17:44:29,279 INFO  [sparkDriver-akka.actor.default-dispatcher-2] Remoting (Slf4jLogger.scala:apply$mcV$sp(74)) - Starting remoting
+2015-08-10 17:44:29,601 INFO  [sparkDriver-akka.actor.default-dispatcher-2] Remoting (Slf4jLogger.scala:apply$mcV$sp(74)) - Remoting started; listening on addresses :[akka.tcp://sparkDriver@172.31.7.92:54600]
+2015-08-10 17:44:29,613 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'sparkDriver' on port 54600.
+2015-08-10 17:44:29,653 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(59)) - Registering MapOutputTracker
+2015-08-10 17:44:29,682 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(59)) - Registering BlockManagerMaster
+2015-08-10 17:44:29,715 INFO  [main] storage.DiskBlockManager (Logging.scala:logInfo(59)) - Created local directory at /tmp/spark-ab39b6fa-101c-4281-bb67-9d9f74872b4d/blockmgr-984667f5-d1bb-4fde-aea8-49bdfb11169e
+2015-08-10 17:44:29,725 INFO  [main] storage.MemoryStore (Logging.scala:logInfo(59)) - MemoryStore started with capacity 1828.2 MB
+2015-08-10 17:44:30,043 INFO  [main] spark.HttpFileServer (Logging.scala:logInfo(59)) - HTTP File server directory is /tmp/spark-ab39b6fa-101c-4281-bb67-9d9f74872b4d/httpd-49b86517-d582-4acc-985c-552ae118e700
+2015-08-10 17:44:30,055 INFO  [main] spark.HttpServer (Logging.scala:logInfo(59)) - Starting HTTP Server
+2015-08-10 17:44:30,152 INFO  [main] server.Server (Server.java:doStart(272)) - jetty-8.y.z-SNAPSHOT
+2015-08-10 17:44:30,171 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(338)) - Started SocketConnector@0.0.0.0:35383
+2015-08-10 17:44:30,171 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'HTTP file server' on port 35383.
+2015-08-10 17:44:30,193 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(59)) - Registering OutputCommitCoordinator
+2015-08-10 17:44:30,372 INFO  [main] server.Server (Server.java:doStart(272)) - jetty-8.y.z-SNAPSHOT
+2015-08-10 17:44:30,389 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(338)) - Started SelectChannelConnector@0.0.0.0:4040
+2015-08-10 17:44:30,389 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'SparkUI' on port 4040.
+2015-08-10 17:44:30,393 INFO  [main] ui.SparkUI (Logging.scala:logInfo(59)) - Started SparkUI at http://172.31.7.92:4040
+2015-08-10 17:44:30,461 INFO  [main] spark.SparkContext (Logging.scala:logInfo(59)) - Added JAR file:/home/hadoop/mystreamapp/target/scala-2.10/sparkstreamingexample_2.10-1.0.jar at http://172.31.7.92:35383/jars/sparkstreamingexample_2.10-1.0.jar with timestamp 1439228670460
+2015-08-10 17:44:30,862 INFO  [main] client.RMProxy (RMProxy.java:createRMProxy(98)) - Connecting to ResourceManager at ip-172-31-7-92.eu-west-1.compute.internal/172.31.7.92:8032
+2015-08-10 17:44:31,152 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Requesting a new application from cluster with 1 NodeManagers
+2015-08-10 17:44:31,168 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Verifying our application has not requested more than the maximum memory capability of the cluster (11520 MB per container)
+2015-08-10 17:44:31,169 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Will allocate AM container, with 896 MB memory including 384 MB overhead
+2015-08-10 17:44:31,170 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Setting up container launch context for our AM
+2015-08-10 17:44:31,172 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Preparing resources for our AM container
+2015-08-10 17:44:31,659 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Uploading resource file:/usr/lib/spark/lib/spark-assembly-1.4.1-hadoop2.6.0-amzn-0.jar -> hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1439217365290_0003/spark-assembly-1.4.1-hadoop2.6.0-amzn-0.jar
+2015-08-10 17:44:31,935 INFO  [main] metrics.MetricsSaver (MetricsSaver.java:showConfigRecord(643)) - MetricsConfigRecord disabledInCluster: false instanceEngineCycleSec: 60 clusterEngineCycleSec: 60 disableClusterEngine: false maxMemoryMb: 3072 maxInstanceCount: 500 lastModified: 1439217395248 
+2015-08-10 17:44:31,936 INFO  [main] metrics.MetricsSaver (MetricsSaver.java:<init>(284)) - Created MetricsSaver j-3RRBPYWC8MTJR:i-45c550e8:SparkSubmit:24310 period:60 /mnt/var/em/raw/i-45c550e8_20150810_SparkSubmit_24310_raw.bin
+2015-08-10 17:44:33,015 INFO  [DataStreamer for file /user/hadoop/.sparkStaging/application_1439217365290_0003/spark-assembly-1.4.1-hadoop2.6.0-amzn-0.jar block BP-2042047413-172.31.7.92-1439217341188:blk_1073741874_1968] metrics.MetricsSaver (MetricsSaver.java:compactRawValues(464)) - 1 aggregated HDFSWriteDelay 2702 raw values into 1 aggregated values, total 1
+2015-08-10 17:44:33,166 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Uploading resource file:/tmp/spark-ab39b6fa-101c-4281-bb67-9d9f74872b4d/__hadoop_conf__7935979208575814764.zip -> hdfs://ip-172-31-7-92.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1439217365290_0003/__hadoop_conf__7935979208575814764.zip
+2015-08-10 17:44:33,187 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Setting up the launch environment for our AM container
+2015-08-10 17:44:33,244 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - Changing view acls to: hadoop
+2015-08-10 17:44:33,244 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - Changing modify acls to: hadoop
+2015-08-10 17:44:33,244 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(hadoop); users with modify permissions: Set(hadoop)
+2015-08-10 17:44:33,262 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Submitting application 3 to ResourceManager
+2015-08-10 17:44:33,296 INFO  [main] impl.YarnClientImpl (YarnClientImpl.java:submitApplication(252)) - Submitted application application_1439217365290_0003
+2015-08-10 17:44:34,303 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Application report for application_1439217365290_0003 (state: ACCEPTED)
+2015-08-10 17:44:34,307 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1439228673275
+	 final status: UNDEFINED
+	 tracking URL: http://ip-172-31-7-92.eu-west-1.compute.internal:20888/proxy/application_1439217365290_0003/
+	 user: hadoop
+2015-08-10 17:44:35,309 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Application report for application_1439217365290_0003 (state: ACCEPTED)
+2015-08-10 17:44:36,311 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Application report for application_1439217365290_0003 (state: ACCEPTED)
+2015-08-10 17:44:37,313 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Application report for application_1439217365290_0003 (state: ACCEPTED)
+2015-08-10 17:44:38,242 INFO  [sparkDriver-akka.actor.default-dispatcher-16] cluster.YarnSchedulerBackend$YarnSchedulerEndpoint (Logging.scala:logInfo(59)) - ApplicationMaster registered as AkkaRpcEndpointRef(Actor[akka.tcp://sparkYarnAM@172.31.0.209:33565/user/YarnAM#-290595496])
+2015-08-10 17:44:38,248 INFO  [sparkDriver-akka.actor.default-dispatcher-16] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> ip-172-31-7-92.eu-west-1.compute.internal, PROXY_URI_BASES -> http://ip-172-31-7-92.eu-west-1.compute.internal:20888/proxy/application_1439217365290_0003), /proxy/application_1439217365290_0003
+2015-08-10 17:44:38,251 INFO  [sparkDriver-akka.actor.default-dispatcher-16] ui.JettyUtils (Logging.scala:logInfo(59)) - Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2015-08-10 17:44:38,315 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Application report for application_1439217365290_0003 (state: ACCEPTED)
+2015-08-10 17:44:39,317 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - Application report for application_1439217365290_0003 (state: RUNNING)
+2015-08-10 17:44:39,318 INFO  [main] yarn.Client (Logging.scala:logInfo(59)) - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 172.31.0.209
+	 ApplicationMaster RPC port: 0
+	 queue: default
+	 start time: 1439228673275
+	 final status: UNDEFINED
+	 tracking URL: http://ip-172-31-7-92.eu-west-1.compute.internal:20888/proxy/application_1439217365290_0003/
+	 user: hadoop
+2015-08-10 17:44:39,318 INFO  [main] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Application application_1439217365290_0003 has started running.
+2015-08-10 17:44:39,562 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 50889.
+2015-08-10 17:44:39,563 INFO  [main] netty.NettyBlockTransferService (Logging.scala:logInfo(59)) - Server created on 50889
+2015-08-10 17:44:39,565 INFO  [main] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Trying to register BlockManager
+2015-08-10 17:44:39,571 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManagerMasterEndpoint (Logging.scala:logInfo(59)) - Registering block manager 172.31.7.92:50889 with 1828.2 MB RAM, BlockManagerId(driver, 172.31.7.92, 50889)
+2015-08-10 17:44:39,575 INFO  [main] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Registered BlockManager
+2015-08-10 17:44:39,824 INFO  [main] scheduler.EventLoggingListener (Logging.scala:logInfo(59)) - Logging events to hdfs:///var/log/spark/apps/application_1439217365290_0003
+2015-08-10 17:44:49,000 INFO  [sparkDriver-akka.actor.default-dispatcher-4] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@ip-172-31-0-209.eu-west-1.compute.internal:56721/user/Executor#535180722]) with ID 1
+2015-08-10 17:44:49,243 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManagerMasterEndpoint (Logging.scala:logInfo(59)) - Registering block manager ip-172-31-0-209.eu-west-1.compute.internal:55510 with 445.8 MB RAM, BlockManagerId(1, ip-172-31-0-209.eu-west-1.compute.internal, 55510)
+2015-08-10 17:44:49,603 INFO  [sparkDriver-akka.actor.default-dispatcher-4] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@ip-172-31-0-209.eu-west-1.compute.internal:36439/user/Executor#1590136008]) with ID 2
+2015-08-10 17:44:49,663 INFO  [main] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+2015-08-10 17:44:49,761 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManagerMasterEndpoint (Logging.scala:logInfo(59)) - Registering block manager ip-172-31-0-209.eu-west-1.compute.internal:57621 with 445.8 MB RAM, BlockManagerId(2, ip-172-31-0-209.eu-west-1.compute.internal, 57621)
+2015-08-10 17:44:50,701 INFO  [Thread-0] spark.SparkContext (Logging.scala:logInfo(59)) - Invoking stop() from shutdown hook
+2015-08-10 17:44:50,714 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2015-08-10 17:44:50,714 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2015-08-10 17:44:50,714 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/api,null}
+2015-08-10 17:44:50,714 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/,null}
+2015-08-10 17:44:50,714 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/static,null}
+2015-08-10 17:44:50,715 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2015-08-10 17:44:50,715 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2015-08-10 17:44:50,715 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2015-08-10 17:44:50,715 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2015-08-10 17:44:50,715 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2015-08-10 17:44:50,716 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2015-08-10 17:44:50,716 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2015-08-10 17:44:50,716 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2015-08-10 17:44:50,716 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2015-08-10 17:44:50,716 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2015-08-10 17:44:50,717 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2015-08-10 17:44:50,717 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2015-08-10 17:44:50,717 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2015-08-10 17:44:50,717 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2015-08-10 17:44:50,717 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2015-08-10 17:44:50,718 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2015-08-10 17:44:50,718 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2015-08-10 17:44:50,718 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2015-08-10 17:44:50,718 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2015-08-10 17:44:50,718 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStop(843)) - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2015-08-10 17:44:50,770 INFO  [Thread-0] ui.SparkUI (Logging.scala:logInfo(59)) - Stopped Spark web UI at http://172.31.7.92:4040
+2015-08-10 17:44:50,773 INFO  [Thread-0] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stopping DAGScheduler
+2015-08-10 17:44:50,774 INFO  [Thread-0] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Shutting down all executors
+2015-08-10 17:44:50,774 INFO  [Yarn application state monitor] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Interrupting monitor thread
+2015-08-10 17:44:50,776 INFO  [sparkDriver-akka.actor.default-dispatcher-4] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Asking each executor to shut down
+2015-08-10 17:44:50,780 INFO  [Thread-0] cluster.YarnClientSchedulerBackend (Logging.scala:logInfo(59)) - Stopped
+2015-08-10 17:44:51,252 INFO  [sparkDriver-akka.actor.default-dispatcher-16] spark.MapOutputTrackerMasterEndpoint (Logging.scala:logInfo(59)) - MapOutputTrackerMasterEndpoint stopped!
+2015-08-10 17:44:51,258 INFO  [Thread-0] util.Utils (Logging.scala:logInfo(59)) - path = /tmp/spark-ab39b6fa-101c-4281-bb67-9d9f74872b4d/blockmgr-984667f5-d1bb-4fde-aea8-49bdfb11169e, already present as root for deletion.
+2015-08-10 17:44:51,259 INFO  [Thread-0] storage.MemoryStore (Logging.scala:logInfo(59)) - MemoryStore cleared
+2015-08-10 17:44:51,260 INFO  [Thread-0] storage.BlockManager (Logging.scala:logInfo(59)) - BlockManager stopped
+2015-08-10 17:44:51,268 INFO  [Thread-0] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - BlockManagerMaster stopped
+2015-08-10 17:44:51,272 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint (Logging.scala:logInfo(59)) - OutputCommitCoordinator stopped!
+2015-08-10 17:44:51,272 INFO  [Thread-0] spark.SparkContext (Logging.scala:logInfo(59)) - Successfully stopped SparkContext
+2015-08-10 17:44:51,273 INFO  [Thread-0] util.Utils (Logging.scala:logInfo(59)) - Shutdown hook called
+2015-08-10 17:44:51,275 INFO  [Thread-0] util.Utils (Logging.scala:logInfo(59)) - Deleting directory /tmp/spark-ab39b6fa-101c-4281-bb67-9d9f74872b4d
